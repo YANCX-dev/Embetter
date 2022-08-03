@@ -1,21 +1,23 @@
-*{
+* {
   padding: 0;
   margin: 0;
   outline: none;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --bg-color: #FFFFFF;
 }
+
 @font-face {
   font-family: "Poppins";
-  src: url("../fonts/Poppinsmediumitalic.ttf");
+  src: url("../fonts/Poppins-Medium.ttf");
   font-style: normal;
   font-weight: normal;
 }
+
 //Header styles
-.header-container{
+.header-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -25,18 +27,21 @@
   max-height: 70px;
   padding: 10px;
   background-color: (--bg-color);
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
+  //border: 2px solid blue;
 }
+
 //Btn styles
-.btn-orange{
+.btn-orange {
   padding: 10px;
   border-radius: 3px;
   background-color: #F58634;
   color: white !important;
   border: none;
 }
+
 //Link Style
-.header-item-nav{
+.header-item-nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -45,72 +50,81 @@
   gap: 20px;
   padding: 0 10px 0 10px;
 }
+
 //Navigation styles
-.nav-links{
+.nav-links {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
   gap: 20px;
 
-  a{
+  a {
     font-family: Poppins;
     text-decoration: none;
     font-size: 14px;
     color: black;
   }
 }
-.nav-icon{
+
+.nav-icon {
   width: 26px;
   height: 24px;
 }
 
 //Burger
-.burger{
+.burger {
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   width: 26px;
   height: 24px;
 
-  div{
+  div {
     background-color: #757589;
     height: 3px;
   }
 
 }
-.burger div:nth-child(2){
+
+.burger div:nth-child(2) {
   width: 80%;
 }
 
+main {
+  min-height: calc(100vh - 70px);
+}
+
 //Main
-.container{
-  max-width: 1200px;
+.container {
+  max-width: 1050px;
   margin: 0 auto;
-  //border: 2px solid red;
+  //border: 2px solid #00ff03;
+  padding-top: 50px;
 }
 
-.slogan-wrapper{
+.slogan-wrapper {
   margin-top: 160px;
-  max-width: 650px;
+  max-width: 550px;
 }
 
-.slogan-header{
-  span{
-    font-size:55px;
+.slogan-header {
+  span {
+    font-size: 55px;
     color: #252B42;
   }
 }
 
-.slogan-subtitle{
+.slogan-subtitle {
   padding: 15px 0 15px 0;
-  p{
+
+  p {
     font-size: 20px;
     color: #252B42;
   }
 }
 
-.input-container{
+.input-container {
   display: flex;
   align-items: center;
   width: 490px;
@@ -118,42 +132,195 @@
   border-radius: 5px;
   padding-right: 10px;
   //border: 1px solid #757589;
-  box-shadow: 0px 1px 15px 4px rgba(34, 60, 80, 0.33);
+  box-shadow: 0 1px 15px 4px rgba(34, 60, 80, 0.33);
 
-  button{
+  button {
     width: 108px;
     height: 50px;
   }
 }
-.form-search-container{
+
+.form-search-container {
   width: 490px;
+  margin-top: 65px;
   //border: 2px solid red;
 }
-.search-form{
-  //border: 2px solid yellow;
-}
-.input-container{
-  //border: 2px solid green;
-}
-.search{
+
+.search {
   width: 100%;
   padding: 14px;
   //border: 2px solid #0a3dff;
 }
-input{
+
+input {
   outline: none;
   border: none;
 }
 
 //Main banner
-.main-banner{
+.main-banner {
   position: absolute;
   top: 100px;
   right: 200px;
+  z-index: -1;
 }
 
-@media screen and (max-width: 1450px){
-  .main-banner{
-    position: relative;
+.blue-vector {
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  top: 501px;
+
+  img {
+    width: 549px;
+    height: 555px;
   }
 }
+
+.categories-container {
+  display: flex;
+  justify-content: center;
+  //border: 2px solid red;
+
+  .categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //border: 2px solid aqua;
+    min-width: 1050px;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      width: 150px;
+      height: 165px;
+      background-color: #FFFFFF;
+      border-radius: 16px;
+      border: 1px solid #EBEBEB;
+      text-decoration: none;
+
+      p {
+        font-size: 16px;
+        font-family: Poppins;
+        color: #252B42;
+        font-style: normal;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.info-container {
+  display: flex;
+  padding-top: 124px;
+  justify-content: space-between;
+
+  .image-container {
+    div {
+      position: relative;
+    }
+
+    .second-image {
+      top: -90px;
+      left: 150px;
+      z-index: 1;
+    }
+  }
+}
+
+
+.content-container {
+  width: calc(1050px / 2);
+
+
+  .content-subtitle {
+    font-family: Poppins;
+    font-size: 16px;
+    color: #00ACAA;
+  }
+
+  .content-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 46px;
+    letter-spacing: 0.2px;
+    color: #252B42;
+    padding-top: 10px;
+  }
+
+  .content-description {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+    color: #757589;
+
+    padding-top: 17px;
+  }
+
+  .content-table {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 29px;
+    justify-content: space-between;
+    gap: 25px;
+
+    .table-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 230px;
+      height: 81px;
+      background: #FFFFFF;
+      border: 1px solid #ECECEC;
+      border-radius: 10px;
+
+      .item-header {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        color: #000000;
+      }
+
+      .item-subheader {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: #757589;
+      }
+    }
+
+  }
+
+  .btn-orange {
+    margin-top: 30px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+  }
+}
+
+//@media screen and (max-width: 1450px) {
+//  .main-banner {
+//    position: relative;
+//  }
+//}
